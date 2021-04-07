@@ -21,3 +21,41 @@
   background: #229;
   border: 15px solid #007;
 }
+
+/* =600px 2box/2lignes et vert/noir inversé */
+@media (min-width: 600px) {
+  body {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .box {
+    width: 50%;
+  }
+
+  #vert {
+    order: -1;
+  }
+}
+
+/* =900px black box none & box inline */
+@media (min-width: 900px) {
+  #noir {
+    display: none;
+  }
+
+  body {
+    flex-flow: row nowrap;
+  }
+}
+
+/* =1200px black box return & always inline */
+@media (min-width: 1200px) {
+  #noir {
+    display: initial;
+  }
+
+  #vert {
+    order: 0;
+  }
+}
